@@ -178,10 +178,10 @@ def export_as_txt():
 
 # GUI Setup
 root = tk.Tk()
-root.title("Business Scraper GUI")
+root.title("CAPY Business Data Scraper")
 
 # Search Keyword Input Section
-tk.Label(root, text="Search Keyword:").pack(pady=(10, 0))
+tk.Label(root, text="Search Business:").pack(pady=(10, 0))
 entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
 
@@ -196,15 +196,15 @@ button_frame = tk.Frame(root)
 button_frame.pack(pady=10)
 
 # Start Scraping Button
-start_button = tk.Button(button_frame, text="Start Scraping", command=run_script)
+start_button = tk.Button(button_frame, text="Start", command=run_script)
 start_button.pack(side=tk.LEFT, padx=5)
 
 # Export Dropdown Menu
-export_button = tk.Menubutton(button_frame, text="Export ▼", relief=tk.RAISED)
+export_button = tk.Menubutton(button_frame, text="Export", relief=tk.RAISED)
 export_menu = tk.Menu(export_button, tearoff=0)
-export_menu.add_command(label="Export as CSV", command=export_as_csv)
-export_menu.add_command(label="Export as Excel", command=export_as_excel)
-export_menu.add_command(label="Export as Text", command=export_as_txt)
+export_menu.add_command(label=".csv", command=export_as_csv)
+export_menu.add_command(label=".xlsx", command=export_as_excel)
+export_menu.add_command(label=".txt", command=export_as_txt)
 export_button["menu"] = export_menu
 export_button.pack(side=tk.LEFT, padx=5)
 

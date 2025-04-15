@@ -35,7 +35,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
 #from utils.email_utils import clean_emails
-from scrapers.website_email_scraper import scrape_website_emails
+from website_email_scraper import scrape_website_emails
 #from storage.database import store_data
 
 def get_google_search_results(query, num_results=10, headless=True):

@@ -178,6 +178,8 @@ def export_as_txt():
 
 # GUI Setup
 root = tk.Tk()
+root.geometry("575x430")
+root.resizable(False, False)
 root.title("CAPY Business Data Scraper")
 
 # Search Keyword Input Section
